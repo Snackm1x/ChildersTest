@@ -1,0 +1,19 @@
+﻿@using ChildersTest.Models
+@model List<Browsers>
+@{
+    ViewBag.Title = "Browsers";
+}
+<h2>@ViewBag.Title.</h2>
+<p>
+    @foreach (var browser in Model)
+    {
+        <table>
+            <tr>
+                <td><b>Browser: </b>@(browser.BrowserName)</td>
+                <td><b>Application Code: </b>@(browser.AppCode)</td>
+                <td><b>Time to Complete: </b>@(browser.TestTime)</td>
+                <td><b>Status: </b> @(browser.CurrentStatus)</td>
+            </tr>
+        </table>
+    }
+</p>

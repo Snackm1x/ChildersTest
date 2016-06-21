@@ -1,0 +1,22 @@
+﻿@using ChildersTest.Models
+@model List<EmailClient>
+@{
+    ViewBag.Title = "Email Clients";
+}
+
+<h2>@ViewBag.Title.</h2>
+<p>
+@foreach(var client in Model)
+{
+    <table>
+    <tr>
+        <td><b>Email Client: </b>@(client.ClientName)</td>
+        <td><b>Application Code: </b>@(client.AppCode)</td>
+        <td><b>Time to Complete: </b>@(client.TestTime)</td>
+        <td><b>Status: </b> @(client.CurrentStatus)</td>
+        <td><b>Platform: </b>@(client.PlatformName)</td>
+        
+    </tr>
+    </table>
+}
+</p>
